@@ -32,239 +32,331 @@ div {
 </head>
 <body>
 
-  <div>
-  <h1>"Conhece-te a ti mesmo"</h1>
-  <p>Antes de tentar compreender o mundo, procure compreender quem você é: seus valores, limitações, talentos e motivações.</p>
-  <sub>Sócrates</sub>
-  </div>
+  <!-- Antes, leia-me: O codígo poderia ser feito em javascript poupando varias tags de html, porém eu quis fazer desta forma  Espero que compreenda -->
+  <!-- Refiz, tava ocupando muito espaço e é *feio, deixa baixo* -->
 
-  <div>
-  <h1>"A vida não examinada não vale a pena ser vivida"</h1>
-  <p>Viver apenas por hábito, sem refletir sobre suas escolhas e seu propósito, é desperdiçar o potencial da existência.</p>
-  <sub>Sócrates</sub>
-  </div>
 
-  <div>
-  <h1>"A coragem é saber o que não temer"</h1>
-  <p>Coragem não é ausência de medo, mas discernir quais medos são justificados e quais apenas nos impedem de agir.</p>
-  <sub>Platão</sub>
-  </div>
+  <script>
+    function motivation() {
+      const div_ = document.createElement('div');
+      this.mostrar = (frase_, significado_, autor_) => {        
+        div_.innerHTML = `
+        <h1>  "${frase_}" </h1> 
+          <p> ${significado_} </p> 
+          <sub> ${autor_} </sub>`;
+        document.body.appendChild(div_);
+      }
+    }  
 
-  <div>
-  <h1>"O começo é a parte mais importante do trabalho"</h1>
-  <p>Dar o primeiro passo é o que torna qualquer objetivo possível. Sem começar, nada acontece.</p>
-  <sub>Platão</sub>
-  </div>
+    const tudo = [
+      {
+        frase: "O maior perigo da vida é assumir precauções demais.",
+        sign: "O medo excessivo pode impedir você de crescer e aproveitar oportunidades.",
+        autor: "Alfred Adler"
+      },
 
-  <div>
-  <h1>"Somos o que repetidamente fazemos. A excelência, portanto, não é um ato, mas um hábito"</h1>
-  <p>Grandes resultados surgem de pequenas ações repetidas diariamente, não de feitos isolados.</p>
-  <sub>atribuída a Aristóteles</sub>
-  </div>
+      {
+        frase: "É mais fácil lutar pelos próprios princípios do que viver de acordo com eles.",
+        sign: "Defender ideias é simples; o desafio é colocá-las em prática diariamente.",
+        autor: "Alfred Adler"
+      },
 
-  <div>
-  <h1>"A esperança é o sonho do homem acordado"</h1>
-  <p>Esperança é a capacidade de imaginar um futuro melhor enquanto continuamos agindo no presente.</p>
-  <sub>Aristóteles</sub>
-  </div>
+      {
+        frase: "Confie apenas no movimento. A vida acontece no nível dos acontecimentos, não das palavras.",
+        sign: "O que realmente define uma pessoa são suas ações, não o que ela promete ou diz.",
+        autor: "Alfred Adler"
+      },
 
-  <div>
-  <h1>"A felicidade depende de nós mesmos"</h1>
-  <p>Embora fatores externos influenciem a vida, a felicidade depende principalmente de como vivemos e das escolhas que fazemos.</p>
-  <sub>Aristóteles</sub>
-  </div>
+      {
+        frase: "A felicidade pertence aos que se bastam a si mesmos.",
+        sign: "Quem desenvolve autonomia emocional depende menos das circunstâncias e da aprovação dos outros para viver bem.",
+        autor: "Aristóteles"
 
-  <div>
-  <h1>"Não é porque as coisas são difíceis que não ousamos; é porque não ousamos que elas são difíceis"</h1>
-  <p>Muitas dificuldades parecem enormes porque evitamos enfrentá-las. A ação reduz o medo.</p>
-  <sub>Sêneca</sub>
-  </div>
+      },
 
-  <div>
-  <h1>"Enquanto houver vida, haverá esperança"</h1>
-  <p>Enquanto estamos vivos, sempre existe a possibilidade de mudança, aprendizado ou recomeço.</p>
-  <sub>Cícero</sub>
-  </div>
+      {
+        frase: "O homem é a medida de todas as coisas.",
+        sign: "O conhecimento e os julgamentos dependem da perspectiva humana; diferentes pessoas podem perceber a mesma realidade de maneiras distintas.",
+        autor: "Protágoras",
+      },
 
-  <div>
-  <h1>"A felicidade da sua vida depende da qualidade dos seus pensamentos"</h1>
-  <p>A forma como interpretamos os acontecimentos influencia profundamente nosso bem-estar.</p>
-  <sub>Marco Aurélio</sub>
-  </div>
+      {
+        frase: "A maior descoberta de todos os tempos é que uma pessoa pode mudar seu futuro mudando sua atitude.",
+        sign: "A forma como encaramos os desafios influencia nossas decisões e, consequentemente, nosso futuro.",
+        autor: "William James",
+      },
 
-  <div>
-  <h1>"Você tem poder sobre sua mente, não sobre os acontecimentos externos"</h1>
-  <p>Não controlamos tudo o que acontece, mas podemos controlar nossa resposta aos acontecimentos.</p>
-  <sub>Marco Aurélio</sub>
-  </div>
+      {
+        frase: "A liberdade é a obediência às leis que a pessoa estabeleceu para si mesma.",
+        sign: "Ser livre não é fazer qualquer coisa, mas viver de acordo com princípios escolhidos conscientemente.",
+        autor: "Jean-Jacques Rousseau",
+      },
 
-  <div>
-  <h1>"Nenhum homem é livre se não é senhor de si mesmo"</h1>
-  <p>Quem é dominado pelos impulsos, vícios ou emoções perde sua verdadeira liberdade.</p>
-  <sub>Epicteto</sub>
-  </div>
+      {
+        frase: "Quem olha para fora sonha; quem olha para dentro desperta.",
+        sign: "O autoconhecimento revela verdades sobre nós que não podem ser encontradas apenas no mundo exterior.",
+        autor: "Carl Gustav Jung"
+      },
 
-  <div>
-  <h1>"Não são as coisas que perturbam as pessoas, mas a opinião que elas têm sobre elas"</h1>
-  <p>Muitas vezes, o sofrimento vem da interpretação que damos aos fatos, e não dos fatos em si.</p>
-  <sub>Epicteto</sub>
-  </div>
+      {
+        frase: "Aquele que abre uma porta de escola fecha uma prisão.",
+        sign: "A educação reduz a violência e cria oportunidades para uma sociedade melhor.",
+        autor: "Victor Hugo"
+      },
 
-  <div>
-  <h1>"Torna-te quem tu és"</h1>
-  <p>Desenvolva seu potencial e viva de acordo com sua própria natureza, em vez de apenas seguir expectativas alheias.</p>
-  <sub>Friedrich Nietzsche</sub>
-  </div>
+      {
+        frase: "A felicidade é quando o que você pensa, o que você diz e o que você faz estão em harmonia.",
+        sign: "A coerência entre pensamentos, palavras e ações traz paz interior.",
+        autor: "Mahatma Gandhi"
+      },
 
-  <div>
-  <h1>"Aquele que tem um porquê para viver pode suportar quase qualquer como"</h1>
-  <p> Um propósito forte dá forças para enfrentar dificuldades e sofrimentos.</p>
-  <sub>Friedrich Nietzsche</sub>
-  </div>
+      {
+        frase: "Tudo o que nos irrita nos outros pode nos levar a compreender a nós mesmos.",
+        sign: "Nossas reações às outras pessoas podem revelar aspectos escondidos da nossa própria personalidade.",
+        autor: "Carl Gustav Jung"
+      },
 
-  <div>
-  <h1>"O homem está condenado a ser livre"</h1>
-  <p>Não podemos escapar da responsabilidade de escolher. Mesmo não escolher já é uma escolha.</p>
-  <sub>Jean-Paul Sartre</sub>
-  </div>
+      {
+        frase: "O homem é livre no momento em que deseja sê-lo.",
+        sign: "A liberdade começa pela atitude interior, embora existam também limitações externas.",
+        autor: "Voltaire"
+      },
+      
+      {
+        frase: "A felicidade não é um ideal da razão, mas da imaginação.",
+        sign: "Cada pessoa imagina a felicidade de uma maneira diferente; ela não pode ser definida por uma fórmula universal.",
+        autor: "Immanuel Kant"
+      },
 
-  <div>
-  <h1>"A liberdade é o que você faz com o que fizeram de você"</h1>
-  <p>Não escolhemos todas as circunstâncias da vida, mas podemos decidir como agir diante delas.</p>
-  <sub>Jean-Paul Sartre</sub>
-  </div>
-  
-  <div>
-  <h1>"A medida da inteligência é a capacidade de mudar"</h1>
-  <p>Pessoas inteligentes estão dispostas a rever suas ideias e aprender com novas evidências.</p>
-  <sub>Albert Einstein</sub>
-  </div>
+      {
+        frase: "Exija muito de si e espere pouco dos outros.",
+        sign: "Concentre-se no que você pode melhorar em si mesmo, em vez de depender das ações alheias.",
+        autor: "Confúcio"
+      },
 
-  <div>
-  <h1>"A simplicidade é o último grau de sofisticação"</h1>
-  <p>Alcançar a simplicidade exige profundo conhecimento; simplificar o complexo é uma forma de excelência.</p>
-  <sub>atribuída a Leonardo da Vinci</sub>
-  </div>
+      {
+        frase: "Quem vence a si mesmo é o mais poderoso dos vencedores.",
+        sign: "Dominar os próprios impulsos e fraquezas é uma conquista maior do que derrotar outras pessoas.",
+        autor: "Confúcio"
+      },
 
-  <div>
-  <h1>"A educação é a arma mais poderosa que você pode usar para mudar o mundo"</h1>
-  <p>O conhecimento transforma indivíduos e sociedades de maneira mais duradoura do que a força.</p>
-  <sub>Nelson Mandela</sub>
-  </div>
+      {
+        frase: "A riqueza consiste muito mais no desfrute do que na posse.",
+        sign: "Ter muitas coisas não garante felicidade; saber aproveitá-las é o que realmente importa.",
+        autor: "Aristóteles"
+      },
 
-  <div>
-    <h1>"Só sei que nada sei."</h1>
-    <p>A verdadeira sabedoria começa quando reconhecemos os limites do nosso conhecimento. Quem acredita saber tudo deixa de aprender.</p>
-    <sub>Sócrates</sub>
-  </div>
+      {
+        frase: "Nenhum vento sopra a favor de quem não sabe para onde ir.",
+        sign: "Sem objetivos, até boas oportunidades podem ser desperdiçadas.",
+        autor: "Sêneca"
+      },
 
-  <div>
-    <h1>"O sábio nunca diz tudo o que pensa, mas pensa sempre tudo o que diz." </h1>
-    <p>Prudência é pensar antes de falar. A sabedoria envolve responsabilidade com as próprias palavras.</p>
-    <sub>Aristóteles</sub>
-  </div>
+      {
+        frase: "Não explique sua filosofia. Incorpore-a.",
+        sign: "Seus atos devem demonstrar seus valores mais do que suas palavras.",
+        autor: "Aristóteles"
+      },
 
-  <div>
-    <h1>"A paciência é amarga, mas seu fruto é doce."</h1>
-    <p>Esperar e perseverar pode ser difícil, mas geralmente produz bons resultados no longo prazo.</p>
-    <sub>Jean-Jacques Rousseau</sub>
-  </div>
+      {
+        frase: "A paciência é amarga, mas seu fruto é doce.",
+        sign: "Esperar e perseverar pode ser difícil, mas geralmente produz bons resultadosno longo prazo.",
+        autor: "Jean-Jacques Rousseau"
+      },
 
-  <div>
-    <h1>"A dúvida é o princípio da sabedoria."</h1>
-    <p>Questionar o que parece óbvio é o primeiro passo para compreender melhor a realidade.</p>
-    <sub>Aristóteles</sub>
-  </div>
+      {
+        frase: "O sábio nunca diz tudo o que pensa, mas pensa sempre tudo o que diz.",
+        sign: "Prudência é pensar antes de falar. A sabedoria envolve responsabilidade com as próprias palavras.",
+        autor: "Aristóteles"
+      },
 
-  <div>
-    <h1>"Não explique sua filosofia. Incorpore-a."</h1>
-    <p>Seus atos devem demonstrar seus valores mais do que suas palavras.</p>
-    <sub>Epicteto</sub>
-  </div>
+      {
+        frase: "Só sei que nada sei.",
+        sign: "A verdadeira sabedoria começa quando reconhecemos os limites do nosso conhecimento. Quem acredita saber tudo deixa de aprender.",
+        autor: "Sócrates"
+      },
 
-  <div>
-    <h1>"Nenhum vento sopra a favor de quem não sabe para onde ir."</h1>
-    <p>Sem objetivos, até boas oportunidades podem ser desperdiçadas.</p>
-    <sub>Sêneca</sub>
-  </div>
 
-  <div>
-    <h1>"A riqueza consiste muito mais no desfrute do que na posse."</h1>
-    <p>Ter muitas coisas não garante felicidade; saber aproveitá-las é o que realmente importa.</p>
-    <sub>Aristóteles</sub>
-  </div>
+      {
+        frase: "A educação é a arma mais poderosa que você pode usar para mudar o mundo.",
+        sign: "O conhecimento transforma indivíduos e sociedades de maneira mais duradoura do que a força.",
+        autor: "Nelson Mandela"
+      },
 
-  <div>
-    <h1>"Quem vence a si mesmo é o mais poderoso dos vencedores."</h1>
-    <p>Dominar os próprios impulsos e fraquezas é uma conquista maior do que derrotar outras pessoas.</p>
-    <sub>Confúcio</sub>
-  </div>
+      {
+        frase: "A simplicidade é o último grau de sofisticação.",
+        sign: "Alcançar a simplicidade exige profundo conhecimento; simplificar o complexo é uma forma de excelência.",
+        autor: "atribuída a Leonardo da Vinci"
+      },
 
-  <div>
-    <h1>"Exija muito de si e espere pouco dos outros."</h1>
-    <p>Concentre-se no que você pode melhorar em si mesmo, em vez de depender das ações alheias.</p>
-    <sub>Confúcio</sub>
-  </div>
+      {
+        frase: "A medida da inteligência é a capacidade de mudar.",
+        sign: "Pessoas inteligentes estão dispostas a rever suas ideias e aprender com novas evidências.",
+        autor: "Albert Einstein"
+      },
 
-  <div>
-    <h1>"A felicidade não é um ideal da razão, mas da imaginação."</h1>
-    <p>Cada pessoa imagina a felicidade de uma maneira diferente; ela não pode ser definida por uma fórmula universal.</p>
-    <sub>Immanuel Kant</sub>
-  </div>
+      {
+        frase: "A liberdade é o que você faz com o que fizeram de você.",
+        sign: "Não escolhemos todas as circunstâncias da vida, mas podemos decidir como agir diante delas.",
+        autor: "Jean-Paul Sartre"
+      },
 
-  <div>
-    <h1>"O homem é livre no momento em que deseja sê-lo."</h1>
-    <p>A liberdade começa pela atitude interior, embora existam também limitações externas.</p>
-    <sub>Voltaire</sub>
-  </div>
 
-  <div>
-    <h1>"Tudo o que nos irrita nos outros pode nos levar a compreender a nós mesmos."</h1>
-    <p>Nossas reações às outras pessoas podem revelar aspectos escondidos da nossa própria personalidade.</p>
-    <sub>Carl Gustav Jung</sub>
-  </div>
+      {
+        frase: "O homem está condenado a ser livre.",
+        sign: "Não podemos escapar da responsabilidade de escolher. Mesmo não escolher já é uma escolha.",
+        autor: "Jean-Paul Sartre"
+      },
 
-  <div>
-    <h1>"A felicidade é quando o que você pensa, o que você diz e o que você faz estão em harmonia."</h1>
-    <p>A coerência entre pensamentos, palavras e ações traz paz interior.</p>
-    <sub> Mahatma Gandhi</sub>
-  </div>
+      {
+        frase: "Aquele que tem um porquê para viver pode suportar quase qualquer como.",
+        sign: "Um propósito forte dá forças para enfrentar dificuldades e sofrimentos.",
+        autor: "Friedrich Nietzsche"
+      },
 
-  <div>
-    <h1>"Aquele que abre uma porta de escola fecha uma prisão."</h1>
-    <p>A educação reduz a violência e cria oportunidades para uma sociedade melhor.</p>
-    <sub>Victor Hugo</sub>
-  </div>
+      {
+        frase: "Torna-te quem tu és.",
+        sign: "Desenvolva seu potencial e viva de acordo com sua própria natureza, em vez de apenas seguir expectativas alheias.",
+        autor: "Friedrich Nietzsche"
+      },
 
-  <div>
-    <h1>"Quem olha para fora sonha; quem olha para dentro desperta."</h1>
-    <p>O autoconhecimento revela verdades sobre nós que não podem ser encontradas apenas no mundo exterior.</p>
-    <sub>Carl Gustav Jung</sub>
-  </div>
+      {
+        frase: "Não são as coisas que perturbam as pessoas, mas a opinião que elas têm sobre elas.",
+        sign: "Muitas vezes, o sofrimento vem da interpretação que damos aos fatos, e não dos fatos em si.",
+        autor: "Epicteto"
+      },
 
-  <div>
-    <h1>"A liberdade é a obediência às leis que a pessoa estabeleceu para si mesma."</h1>
-    <p>Ser livre não é fazer qualquer coisa, mas viver de acordo com princípios escolhidos conscientemente.</p>
-    <sub>Jean-Jacques Rousseau</sub>
-  </div>
+      {
+        frase: "Nenhum homem é livre se não é senhor de si mesmo.",
+        sign: "Quem é dominado pelos impulsos, vícios ou emoções perde sua verdadeira liberdade.",
+        autor: "Epicteto"
+      },
 
-  <div>
-    <h1>"A maior descoberta de todos os tempos é que uma pessoa pode mudar seu futuro mudando sua atitude."</h1>
-    <p>A forma como encaramos os desafios influencia nossas decisões e, consequentemente, nosso futuro.</p>
-    <sub>William James</sub>
-  </div>
 
-  <div>
-    <h1>"O homem é a medida de todas as coisas."</h1>
-    <p>O conhecimento e os julgamentos dependem da perspectiva humana; diferentes pessoas podem perceber a mesma realidade de maneiras distintas.</p>
-    <sub>Protágoras</sub>
-  </div>
+      {
+        frase: "Você tem poder sobre sua mente, não sobre os acontecimentos externos.",
+        sign: "Não controlamos tudo o que acontece, mas podemos controlar nossa resposta aos acontecimentos.",
+        autor: "Marco Aurélio"
+      },
 
-  <div>
-    <h1>"A felicidade pertence aos que se bastam a si mesmos."</h1>
-    <p>Quem desenvolve autonomia emocional depende menos das circunstâncias e da aprovação dos outros para viver bem.</p>
-    <sub>Aristóteles</sub>
-  </div>
 
+      {
+        frase: "A felicidade da sua vida depende da qualidade dos seus pensamentos.",
+        sign: "A forma como interpretamos os acontecimentos influencia profundamente nosso bem-estar.",
+        autor: "Marco Aurélio"
+      },
+
+
+      {
+        frase: "Enquanto houver vida, haverá esperança.",
+        sign: "Enquanto estamos vivos, sempre existe a possibilidade de mudança, aprendizado ou recomeço.",
+        autor: "Cícero"
+      },
+
+      {
+        frase: "Não é porque as coisas são difíceis que não ousamos; é porque não ousamos que elas são difíceis.",
+        sign: "Muitas dificuldades parecem enormes porque evitamos enfrentá-las. A ação reduz o medo.",
+        autor: "Sêneca"
+      },
+
+      {
+        frase: "A felicidade depende de nós mesmos.",
+        sign: "Embora fatores externos influenciem a vida, a felicidade depende principalmente de como vivemos e das escolhas que fazemos.",
+        autor: "Aristóteles"
+      },
+
+      {
+        frase: "A esperança é o sonho do homem acordado.",
+        sign: "Esperança é a capacidade de imaginar um futuro melhor enquanto continuamos agindo no presente.",
+        autor: "Aristóteles"
+      },
+
+      {
+        frase: "Somos o que repetidamente fazemos. A excelência, portanto, não é um ato, mas um hábito.",
+        sign: "Grandes resultados surgem de pequenas ações repetidas diariamente, não de feitos isolados.",
+        autor: "atribuída a Aristóteles"
+      },
+
+      {
+        frase: "O começo é a parte mais importante do trabalho.",
+        sign: "Dar o primeiro passo é o que torna qualquer objetivo possível. Sem começar, nada acontece.",
+        autor: "Platão"
+      },
+
+      {
+        frase: "A coragem é saber o que não temer.",
+        sign: "Coragem não é ausência de medo, mas discernir quais medos são justificados e quais apenas nos impedem de agir.",
+        autor: "Platão"
+      },
+
+      {
+        frase: "A vida não examinada não vale a pena ser vivida.",
+        sign: "Viver apenas por hábito, sem refletir sobre suas escolhas e seu propósito, é desperdiçar o potencial da existência.",
+        autor: "Sócrates"
+      },
+
+      {
+        frase: "Conhece-te a ti mesmo",
+        sign: "Antes de tentar compreender o mundo, procure compreender quem você é: seus valores, limitações, talentos e motivações.",
+        autor: "Sócrates"
+      },
+
+      {
+        frase: "Ver com os olhos de outra pessoa, ouvir com os ouvidos de outra pessoa e sentir com o coração de outra pessoa.",
+        sign: "Adler descreve a empatia: compreender genuinamente a experiência do outro.",
+        autor: "Alfred Adler"
+      },
+
+      {
+        frase: "",
+        sign: "",
+        autor: ""
+      },
+
+      {
+        frase: "",
+        sign: "",
+        autor: ""
+      },
+
+      {
+        frase: "",
+        sign: "",
+        autor: ""
+      },
+
+      {
+        frase: "",
+        sign: "",
+        autor: ""
+      },
+
+      {
+        frase: "",
+        sign: "",
+        autor: ""
+      },
+
+      {
+        frase: "",
+        sign: "",
+        autor: ""
+      }
+
+      
+    ];
+
+    function loop() {
+
+      for (let i = 0; i < tudo.length; i++) {
+        const index = new motivation();
+        index.mostrar(tudo[i].frase, tudo[i].sign, tudo[i].autor);
+
+      }
+
+    }
+    loop();
+
+  </script>
 </body>
 </html>
